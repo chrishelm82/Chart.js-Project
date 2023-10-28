@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './Button.css'
 
 function Button() {
-  const [users, setUsers] = useState({})
+  const [users, setUsers] = useState([])
 
   const fetchUsers = () => {
-    fetch('https://jsonplaceholder.typicode.com/users/1')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
